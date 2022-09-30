@@ -2,6 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
+// Firebase configurations
 var firebaseConfig = {
     apiKey: "AIzaSyCD5CSGBB4S6kDoS1uC9G7arIvvGaE31Ro",
   authDomain: "cs-279r-pset-4.firebaseapp.com",
@@ -12,9 +13,12 @@ var firebaseConfig = {
   measurementId: "G-S9D5HW9176"
 };
 
+// Initialize app
 firebase.initializeApp(firebaseConfig);
 
+// Authentication with Google Accounts
 export const auth = firebase.auth();
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 
+// Initialize firestore database for storing account info and todos
 export const db = firebase.firestore();
